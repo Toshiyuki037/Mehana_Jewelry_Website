@@ -1,0 +1,108 @@
+<!--
+  File: admin.html
+  Author: Max Maehara
+  Last Edited: 2026-05-15
+
+  Description:
+  Admin dashboard for viewing orders and editing Mehana Jewelry inventory.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mehana Admin</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="admin-page">
+
+    <!-- Login -->
+    <section class="admin-login" id="login-box">
+      <input
+        id="email"
+        type="email"
+        placeholder="Admin email"
+      />
+
+      <input
+        id="password"
+        type="password"
+        placeholder="Password"
+      />
+
+      <button
+        class="admin-btn"
+        id="login-btn"
+      >
+        Login
+      </button>
+    </section>
+
+    <!-- Admin Content -->
+    <section id="admin-content" style="display:none;">
+
+      <!-- Orders -->
+      <h2>Paid Orders</h2>
+      <section id="orders"></section>
+
+      <!-- Add Product -->
+      <h2>Add Product</h2>
+
+      <div class="product-editor-card">
+
+        <input
+          id="new-name"
+          placeholder="Product name"
+        />
+
+        <input
+          id="new-category"
+          placeholder="Category: necklaces, earrings, bangles, bracelets"
+        />
+
+        <textarea
+          id="new-description"
+          placeholder="Description"
+        ></textarea>
+
+        <input
+          id="new-image"
+          placeholder="Image URL (images/product.jpg)"
+        />
+
+        <label class="checkbox-row">
+          <input
+            id="new-active"
+            type="checkbox"
+            checked
+          />
+          Active
+        </label>
+
+        <button
+          class="admin-btn"
+          id="add-product-btn"
+        >
+          Add Product
+        </button>
+
+      </div>
+
+      <!-- Inventory -->
+      <h2>Inventory Editor</h2>
+
+      <section id="products"></section>
+
+    </section>
+
+  </main>
+
+  <script src="admin.js"></script>
+
+</body>
+</html>

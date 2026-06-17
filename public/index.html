@@ -1,0 +1,108 @@
+<!--
+  File: index.html
+  Author: Max Maehara
+  Last Edited: 2026-05-15
+
+  Description:
+  Main customer-facing storefront page.
+
+  Features:
+  - Left: Brand logo text
+  - Center: Product categories
+  - Right: Shopping cart
+  - Products loaded dynamically from PostgreSQL
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mehana Jewelry</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================================
+       Navbar
+  ======================================= -->
+
+  <nav class="navbar">
+
+    <!-- Brand -->
+    <div class="logo">
+      MEHANA JEWELRY
+    </div>
+
+    <!-- Categories -->
+    <ul class="nav-links">
+      <li class="active" data-category="necklaces">
+        Necklaces
+      </li>
+
+      <li data-category="bangles">
+        Bangles
+      </li>
+    </ul>
+
+    <!-- Cart -->
+    <div class="cart-wrapper">
+      <button id="cart-toggle" class="cart">
+        <img src="images/cart.png" alt="Cart">
+        <span id="cart-count">0</span>
+      </button>
+
+      <div id="cart-dropdown" class="cart-dropdown">
+        <h3>Cart</h3>
+        <div id="cart-items"></div>
+
+        <button id="checkout-btn" class="checkout-btn">
+          Checkout
+        </button>
+      </div>
+    </div>
+
+  </nav>
+
+  <!-- ======================================
+       Page Header
+  ======================================= -->
+
+  <section class="header">
+    <div class="category-title-wrap">
+      <img src="images/3.svg" alt="" class="title-deco">
+      <img src="images/4.svg" alt="" class="title-deco">
+
+      <h1 id="category-title">Necklaces</h1>
+
+      <img src="images/5.svg" alt="" class="title-deco">
+      <img src="images/6.svg" alt="" class="title-deco">
+    </div>
+  </section>
+
+  <!-- ======================================
+       Product Grid
+       Filled by script.js
+  ======================================= -->
+
+  <section
+    class="product-grid"
+    id="product-grid"
+  >
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
