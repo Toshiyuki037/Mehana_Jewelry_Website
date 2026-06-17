@@ -799,3 +799,47 @@ body {
     padding: 30px 20px;
   }
 }
+
+/* FOOTER */
+
+.site-footer {
+  border-top: 1px solid #eee;
+  padding: 32px 60px;
+  text-align: center;
+  color: #555;
+  font-size: 15px;
+  background: #faf9f7;
+}
+
+.footer-links {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.footer-links a {
+  color: #111;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-links a:hover {
+  opacity: 0.55;
+}
+
+.footer-small {
+  font-size: 13px;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 28px 24px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
