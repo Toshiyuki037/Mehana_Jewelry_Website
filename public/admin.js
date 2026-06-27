@@ -60,7 +60,8 @@ async function loadOrders() {
     const items = order.items
       .map(item => `
         <li>
-          ${item.option_value} x${item.quantity}
+          <strong>${item.product_name || "Product"}</strong>
+          — ${item.option_value} x${item.quantity}
           — ${formatMoney(item.price_cents)}
         </li>
       `)
