@@ -370,13 +370,12 @@ app.get("/api/admin/orders", requireAdmin, async (req, res) => {
         COALESCE(
           json_agg(
             json_build_object(
-              'id', po.id,
-              'option_type', po.option_type,
+              'product_name', p.name,
               'option_value', po.option_value,
-              'price_cents', po.price_cents,
-              'stock_quantity', po.stock_quantity,
-              'active', po.active
+              'quantity', oi.quantity,
+              'price_cents', oi.price_cents_at_purchase
             )
+            ORDER BY oi.id ASC
           ) FILTER (WHERE oi.id IS NOT NULL),
           '[]'
         ) AS items
